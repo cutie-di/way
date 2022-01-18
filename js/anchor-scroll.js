@@ -1,0 +1,1 @@
+import{scrollToElement}from"./utils.js";const smoothAnchorScroll=()=>{const o=document.querySelectorAll('a[href^="#"]:not(a[href="#"]');for(const e of o)e.addEventListener("click",(o=>{o.preventDefault();const t=e.getAttribute("href");scrollToElement(document.querySelector(t))}))};export{smoothAnchorScroll};
