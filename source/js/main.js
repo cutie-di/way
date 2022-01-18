@@ -13,7 +13,7 @@ import {
 
 import {
   openPopup,
-  trapFocusOnModal,
+  trapFocusOnModal
 } from './modal.js';
 
 import {

@@ -90,7 +90,6 @@
   background-color: $color-basic-white;
 
   @media ($tablet-max-width) {
-
     &::before,
     &::after {
       content: "";

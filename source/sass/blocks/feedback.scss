@@ -210,21 +210,21 @@
     z-index: -5;
   }
 
-    &:hover,
-    &:focus {
+  &:hover,
+  &:focus {
     background-color: $color-focus-orange;
 
-      &::after {
-        background-color: $color-basic-white;
-        z-index: 5;
-        left: 120%;
-        transition: all 500ms ease-out;
-      }
+    &::after {
+      background-color: $color-basic-white;
+      z-index: 5;
+      left: 120%;
+      transition: all 500ms ease-out;
     }
+  }
 
-    &:active {
-        opacity: 0.8;
-      }
+  &:active {
+    opacity: 0.8;
+  }
 
   @media ($tablet-max-width) {
     font-size: 10px;
