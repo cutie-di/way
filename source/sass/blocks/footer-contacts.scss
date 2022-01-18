@@ -1,0 +1,135 @@
+.footer-contacts {
+  padding-left: 62px;
+  padding-right: 40px;
+
+  @media ($desktop-middle-width) {
+    padding: 0 15px;
+  }
+
+  @media ($tablet-max-width) {
+    padding: 0;
+    padding-left: 44px;
+  }
+
+  @media ($mobile-max-width) {
+    padding: 0;
+  }
+}
+
+.footer-contacts h2 {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  text-align: left;
+  text-decoration: none;
+  color: $color-title-black;
+  margin: 0;
+  margin-top: 20px;
+
+  @media ($tablet-max-width) {
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  @media ($mobile-max-width) {
+    text-align: center;
+    margin-top: 31px;
+  }
+}
+
+.footer-contacts__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 17px;
+
+  @media ($mobile-max-width) {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.footer-contacts__item {
+  display: block;
+
+  @media ($mobile-max-width) {
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.footer-contacts__link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+
+  @media ($mobile-max-width) {
+    justify-content: center;
+    margin-left: 20px;
+  }
+
+  &:hover span,
+  &:focus span {
+    color: $color-title-black-opacity-07;
+  }
+
+  &:active span {
+    color: $color-decoration-orange;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    stroke: $color-title-black-opacity-07;
+  }
+
+  &:active svg {
+    stroke: $color-decoration-orange;
+  }
+}
+
+.footer-contacts__link span {
+  display: block;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: $color-decoration-orange;
+  transition: color 400ms ease-in-out;
+  align-items: center;
+  padding: 10px;
+  padding-left: 42px;
+}
+
+.footer-contacts__link--phone span {
+  text-decoration: underline;
+  font-size: 16px;
+  line-height: 32px;
+
+  @media ($mobile-max-width) {
+    padding-left: 28px;
+  }
+}
+
+.footer-contacts__link svg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  fill: none;
+  stroke: $color-footer-decoration;
+  transition: stroke 400ms ease-in-out;
+}
+
+.footer-contacts__link--phone svg {
+  left: 6px;
+
+  @media ($mobile-max-width) {
+    left: -6px;
+  }
+}

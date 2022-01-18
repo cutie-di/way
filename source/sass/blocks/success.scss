@@ -1,0 +1,102 @@
+.success {
+  position: fixed;
+  z-index: 12;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.success__wrapper {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  z-index: 14;
+  width: 728px;
+  min-height: 444px;
+  background-color: $color-feedback-background;
+  box-shadow: 0 4px 30px $color-page-black-opacity-03;
+
+  @media ($mobile-max-width) {
+    width: 320px;
+    min-height: 568px;
+  }
+}
+
+.success button[type="button"] {
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 16px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    width: 32px;
+    height: 1px;
+    background-color: $color-header-close-toggle-opacity-02;
+  }
+
+  &::before {
+    transform: rotate(46deg);
+  }
+
+  &::after {
+    transform: rotate(-46deg);
+  }
+
+  &:hover
+  &:focus {
+    outline: 1px solid $color-basic-black;
+  }
+
+  &:hover::before,
+  &:hover::after,
+  &:focus::before,
+  &:focus::after {
+    background-color: $color-modal-input-text;
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: $color-focus-orange;
+  }
+}
+
+.success p {
+  position: relative;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 43px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  color: $color-modal-input-text;
+  margin: 0 auto;
+}
+
+.success__overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 8;
+  width: 100%;
+  height: 100%;
+  background-color: $color-basic-white-opacity-05;
+}

@@ -1,0 +1,129 @@
+.next-directions {
+  position: relative;
+  padding-right: 35px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    min-height: 189px;
+    top: 23px;
+    right: 3px;
+    background-color: $color-footer-decoration;
+  }
+
+  @media ($desktop-middle-width) {
+    padding-right: 25px;
+  }
+
+  @media ($tablet-max-width) {
+    padding-right: 46px;
+
+    &::after {
+      min-height: 177px;
+    }
+  }
+
+  @media ($mobile-max-width) {
+    border-bottom: 1px solid $color-footer-decoration;
+    padding-right: 0;
+
+    &::after {
+      content: none;
+    }
+  }
+}
+
+.next-directions h2 {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  text-align: left;
+  text-decoration: none;
+  color: $color-title-black;
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 15px;
+
+  @media ($tablet-max-width) {
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  @media ($mobile-max-width) {
+    text-align: center;
+    margin-top: 0;
+  }
+}
+
+.next-directions__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 -5px;
+
+  @media ($tablet-max-width) {
+    column-gap: 15px;
+  }
+
+  @media ($mobile-max-width) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    margin: 0 auto;
+    padding: 0 6px;
+    padding-bottom: 18px;
+  }
+}
+
+.next-directions__inner-block-list {
+  display: grid;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media ($mobile-max-width) {
+    text-align: center;
+
+    &:not(:last-child) {
+      padding-bottom: 6px;
+    }
+
+    &:last-child {
+      grid-column: span 2;
+      margin: 0 auto;
+    }
+  }
+}
+
+.next-directions__item {
+  display: block;
+}
+
+.next-directions__link {
+  display: inline-block;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: left;
+  text-decoration: none;
+  color: $color-title-black-opacity-05;
+  transition: color 400ms ease-in-out;
+  padding: 5px;
+
+  @media ($mobile-max-width) {
+    text-align: center;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-title-black-opacity-07;
+  }
+
+  &:active {
+    color: $color-decoration-orange;
+  }
+}
